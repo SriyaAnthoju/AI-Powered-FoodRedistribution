@@ -14,13 +14,13 @@
 
 ---
 
-## 🌟 Introduction
+##  Introduction
 
 Food wastage is a significant global issue, particularly in urban areas where restaurants and events often have surplus edible food.Simultaneously, many individuals and communities face food insecurity and hunger.
 
 This project introduces an **AI-Powered Food Redistribution System**, a digital platform that serves as a bridge between food donors (Senders) and receivers like NGOs or shelters (Receivers).Our goal is to redistribute surplus food smartly and efficiently, minimizing waste and supporting sustainable food management.
 
-## ✨ Key Features
+##  Key Features
 
 ### 🧑‍💻 Role-Based Authentication
 * Separate login and dashboards for:
@@ -53,7 +53,7 @@ This project introduces an **AI-Powered Food Redistribution System**, a digital 
 * Built with RESTful APIs, enabling a scalable, microservices-style development approach.
 
 
-## 🏗️ System Architecture
+##  System Architecture
 
 The platform is built on a modular, layered architecture, ensuring scalability and maintainability.Each component functions independently while working together to match donors and recipients seamlessly.
 
