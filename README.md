@@ -20,7 +20,7 @@ Food wastage is a significant global issue, particularly in urban areas where re
 
 This project introduces an **AI-Powered Food Redistribution System**, a digital platform that serves as a bridge between food donors (Senders) and receivers like NGOs or shelters (Receivers).Our goal is to redistribute surplus food smartly and efficiently, minimizing waste and supporting sustainable food management.
 
-##  Key Features
+## ✨ Key Features
 
 ### 🧑‍💻 Role-Based Authentication
 * Separate login and dashboards for:
@@ -32,25 +32,32 @@ This project introduces an **AI-Powered Food Redistribution System**, a digital 
 * Receivers can browse and claim available donations.
 * Once claimed, the donor receives confirmation for the handover.
 
-### 📬 Real-Time Email Notifications
-* All receivers get notified via email when new donations are posted.
-* This helps ensure quick claiming and reduces food spoilage.
-
 ### 🤖 AI-Powered Features
-* **Smart Matching Engine:** Suggests the best donors for each receiver based on geographic proximity, food type, quantity, and historical claim behavior.
-* **Demand Prediction:** Learns from past data to forecast which areas are likely to need food and identify peak demand times.
-* **Anomaly Detection:** Monitors system behavior to detect fake entries, suspicious cancellations, or abuse of the platform.
+* **Smart Matching Engine:** Suggests the best donors for each receiver based on geographic proximity, food type, and historical preferences.
+* **Demand Prediction:** Uses a Prophet model to forecast areas likely to need food and identify peak demand times.
+* **Anomaly Detection:** Monitors system behavior to detect fake entries, suspicious cancellations, or platform abuse.
+
+### ⏰ System Automation with Celery
+* **Automated AI Model Retraining:** The demand prediction models are automatically retrained every day at midnight, ensuring the AI stays up-to-date with the latest data.
+* **Scheduled Reminders:** The system automatically sends periodic email reminders for donation pickups and for leaving feedback, managed entirely in the background.
 
 ### 🗣 Feedback and Review System
 * After a donation is picked up, receivers can leave reviews and ratings to encourage trust and transparency.
 
 ### 📊 Admin Dashboard
-* Admins can view all users, donations, claims, and analytics.
-* Provides insights into which locations have high donation frequency or unclaimed listings.
+* Admins can view all users, donations, claims, and analytics, providing insights into platform activity.
 
 ### 🔐 Secure & Modular Architecture
-* Features JWT-based authentication for security.
+* Features secure **JWT-based authentication** for the API.
 * Built with RESTful APIs, enabling a scalable, microservices-style development approach.
+
+## 🏗️ System Architecture
+
+The platform is built on a modular, layered architecture, ensuring scalability and maintainability. It uses a task queue (Celery & Redis) to offload heavy processes from the main application thread, resulting in a faster user experience.
+
+<p align="center">
+  <img src="https://i.imgur.com/k9a4s2P.png" alt="System Architecture Diagram" width="700"/>
+</p>
 
 
 ##  System Architecture
@@ -67,11 +74,13 @@ The platform is built on a modular, layered architecture, ensuring scalability a
 
 | Component | Technology / Library |
 | :--- | :--- |
-| **Backend** | `Django`, `Django REST Framework` |
+| **Backend** | `Django`, `Django REST Framework`, `Celery` |
 | **Frontend** | `React.js`, `JavaScript`, `HTML5`, `CSS3` |
 | **Database** | `MySQL` |
+| **Task Queue** | `Redis` (Broker), `django-celery-beat` (Scheduler)|
 | **AI / ML** | `Scikit-learn`, `Prophet`, `Pandas`, `OpenCV` |
-| **Notifications** | `SMTP` (via Django)|
+| **Authentication**| `Simple-JWT` |
+| **Notifications** | `SMTP` (via Django) |
 | **Image Storage** | `Local Storage` |
 
 ## 🚀 Getting Started
