@@ -22,22 +22,36 @@ This project introduces an **AI-Powered Food Redistribution System**, a digital 
 
 ## ✨ Key Features
 
-* **Separate Dashboards:** Dedicated login and dashboard interfaces for both Senders and Receivers.
-* **Food Donation Listings:** Senders can easily upload details of surplus food, including type, quantity, shelf life, and optional images.
-* **Real-Time Notifications:** Receivers are instantly notified about new, nearby food donations via email (SMTP).
-* **AI-Powered Matching:** An intelligent engine matches donations with the most suitable receivers based on location, food type, and preferences.
-* **Image Analysis:** A lightweight AI model assesses uploaded images to check for food freshness.
-* **Feedback System:** A simple rating and review system allows receivers to provide feedback on donations.
-* **Admin Analytics:** An administrative overview panel for tracking all platform activity and generating data analytics.
+### 🧑‍💻 Role-Based Authentication
+* Separate login and dashboards for:
+    * **Senders (Food Donors):** Restaurants, caterers, and individuals with surplus food.
+    * **Receivers (NGOs, Shelters, Volunteers):** Those looking to accept donations.
 
-## 🧠 Why an AI-Powered System?
+### 🍱 Food Donation & Claiming System
+* Donors can upload details of available food: type, quantity, shelf life, and optional images.
+* Receivers can browse and claim available donations.
+* Once claimed, the donor receives confirmation for the handover.
 
-The integration of Artificial Intelligence elevates the platform's efficiency and effectiveness:
+### 📬 Real-Time Email Notifications
+* All receivers get notified via email when new donations are posted.
+* This helps ensure quick claiming and reduces food spoilage.
 
-* **Smart Matching:** Our AI recommends the best receivers for a donation by analyzing historical data, location, and food preferences.We use a `RandomForestRegressor` model from Scikit-learn for this task.
-* **Demand Prediction:** The system uses a **Prophet** model to forecast areas that will have a high demand for food at specific times, allowing for proactive planning.
-* **Anomaly Detection:** AI helps maintain platform integrity by detecting fraudulent activities or unusual user behavior, such as repeated cancellations, using threshold-based checks.
-* **Image Classification:** A Convolutional Neural Network (CNN) provides a preliminary check on whether an uploaded food image appears fresh or spoiled.
+### 🤖 AI-Powered Features
+* **Smart Matching Engine:** Suggests the best donors for each receiver based on geographic proximity, food type, quantity, and historical claim behavior.
+* **Demand Prediction:** Learns from past data to forecast which areas are likely to need food and identify peak demand times.
+* **Anomaly Detection:** Monitors system behavior to detect fake entries, suspicious cancellations, or abuse of the platform.
+
+### 🗣 Feedback and Review System
+* After a donation is picked up, receivers can leave reviews and ratings to encourage trust and transparency.
+
+### 📊 Admin Dashboard
+* Admins can view all users, donations, claims, and analytics.
+* Provides insights into which locations have high donation frequency or unclaimed listings.
+
+### 🔐 Secure & Modular Architecture
+* Features JWT-based authentication for security.
+* Built with RESTful APIs, enabling a scalable, microservices-style development approach.
+
 
 ## 🏗️ System Architecture
 
