@@ -43,10 +43,6 @@ The integration of Artificial Intelligence elevates the platform's efficiency an
 
 The platform is built on a modular, layered architecture, ensuring scalability and maintainability.Each component functions independently while working together to match donors and recipients seamlessly.
 
-<p align="center">
-  <img src="https://i.imgur.com/k9a4s2P.png" alt="System Architecture Diagram" width="700"/>
-</p>
-
 * **Presentation Layer (Frontend):** A dynamic and responsive user interface built with **React.js**. It handles user registration, login, food upload forms, and donation Browse.
 * **Application Layer (Backend):** The core logic is powered by **Django**.It manages user sessions, REST APIs, and business logic, and communicates with the AI engine.
 * **AI/ML Engine:** This layer houses our intelligent models for matching, prediction, and detection.
