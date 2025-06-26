@@ -51,14 +51,6 @@ This project introduces an **AI-Powered Food Redistribution System**, a digital 
 * Features secure **JWT-based authentication** for the API.
 * Built with RESTful APIs, enabling a scalable, microservices-style development approach.
 
-## 🏗️ System Architecture
-
-The platform is built on a modular, layered architecture, ensuring scalability and maintainability. It uses a task queue (Celery & Redis) to offload heavy processes from the main application thread, resulting in a faster user experience.
-
-<p align="center">
-  <img src="https://i.imgur.com/k9a4s2P.png" alt="System Architecture Diagram" width="700"/>
-</p>
-
 
 ##  System Architecture
 
