@@ -72,7 +72,7 @@ The platform is built on a modular, layered architecture, ensuring scalability a
 | **Database** | `MySQL` |
 | **AI / ML** | `Scikit-learn`, `Prophet`, `Pandas`, `OpenCV` |
 | **Notifications** | `SMTP` (via Django)|
-| **Image Storage** | `Cloudinary` / `AWS S3` |
+| **Image Storage** | `Local Storage` |
 
 ## 🚀 Getting Started
 
