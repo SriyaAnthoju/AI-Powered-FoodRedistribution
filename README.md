@@ -89,14 +89,13 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo**
     ```sh
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/SriyaAnthoju/AI-Powered-FoodRedistribution.git
+    cd AI-Powered-FoodRedistribution
     ```
 2.  **Backend Setup**
     ```sh
     # Navigate to backend directory
     cd backend
-    # Create a virtual environment and install dependencies
     python -m venv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     pip install -r requirements.txt
@@ -107,11 +106,8 @@ To get a local copy up and running, follow these simple steps.
     ```
 3.  **Frontend Setup**
     ```sh
-    # Navigate to frontend directory
     cd frontend
-    # Install NPM packages
     npm install
-    # Start the development server
     npm start
     ```
 
