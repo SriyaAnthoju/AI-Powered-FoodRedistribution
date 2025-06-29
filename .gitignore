@@ -1,0 +1,36 @@
+# Virtual environments
+venv/
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Django migration files (keep init.py)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Bytecode
+*.pyo
+*.pyd
+*.pyc
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Pickle model files
+*.pkl
+
+# Frontend (if applicable)
+node_modules/
+dist/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+.env
